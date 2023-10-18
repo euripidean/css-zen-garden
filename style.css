@@ -1,0 +1,68 @@
+/* Type selector
+class selector
+id selector
+child selector
+:nth-child() selector
+:first-of-type selector
+attribute selector
+wild card selector
+group selector
+Combined class selector
+Descendant selector */
+
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 32px;
+  background: repeating-linear-gradient(
+    white,
+    white 30px,
+    #9198e5 31px,
+    #9198e5 32px
+  );
+  line-height: 32px;
+  margin-left: 10%;
+  border-left: 1px double #9198e5;
+  padding-left: 2px;
+}
+
+.page-wrapper {
+  margin-left: 10px;
+}
+
+header h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 64px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+header h2 {
+  margin-top: 32px;
+}
+
+h1,
+h2,
+h3,
+h5,
+h5,
+h6 {
+  margin: 0;
+}
+
+/*change color of text highlight*/
+::-moz-selection {
+  background: yellow;
+  height: 16px;
+}
+
+::selection {
+  background: yellow;
+  height: 16px;
+}
