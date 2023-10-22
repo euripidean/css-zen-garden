@@ -1,14 +1,21 @@
 /* Type selector
-class selector
-id selector
-child selector
+class selector done
+id selector done
+child selector done
 :nth-child() selector
-:first-of-type selector
-attribute selector
+:first-of-type selector done
+attribute selector n/a
 wild card selector
-group selector
+group selector done
 Combined class selector
 Descendant selector */
+
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+
+/* declare variable for line height at 32px */
+:root {
+  --line-height: 32px;
+}
 
 body {
   background-color: white;
@@ -16,35 +23,41 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   font-family: "Cedarville Cursive", cursive;
-  font-size: 32px;
+  font-size: var(--line-height);
   background: repeating-linear-gradient(
     white,
     white 30px,
     #9198e5 31px,
-    #9198e5 32px
+    #9198e5 var(--line-height)
   );
-  line-height: 32px;
-  margin-left: 10%;
-  border-left: 1px double #9198e5;
+  line-height: var(--line-height);
+  margin-left: 100px;
+  margin-right: 20px;
+  border-left: 1px solid red;
   padding-left: 2px;
+}
+
+#css-zen-garden {
+  position: relative;
+  min-height: 100vh;
 }
 
 .page-wrapper {
   margin-left: 10px;
+  padding-bottom: 2.5rem;
 }
 
 header h1 {
   font-family: "Permanent Marker", cursive;
-  font-size: 64px;
-  margin-bottom: 32px;
-  margin-top: 32px;
+  font-size: calc(var(--line-height) * 2);
+  margin: calc(var(--line-height) * 2) 0;
   text-align: center;
   width: 100%;
   position: relative;
 }
 
 header h2 {
-  margin-top: 32px;
+  margin-top: var(--line-height);
 }
 
 h1,
@@ -56,6 +69,53 @@ h6 {
   margin: 0;
 }
 
+#zen-supporting h3 {
+  text-decoration: wavy underline red;
+  text-underline-position: under;
+}
+
+h3 + p {
+  text-indent: 2em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 2px;
+}
+
+/* target every other paragraph inside #zen-supporting */
+#zen-supporting p:nth-child(odd)::after {
+  content: "*";
+  color: red;
+  font-size: 96px;
+}
+
+aside div > h3 {
+  text-decoration: double underline red 1px;
+  text-underline-position: under;
+}
+
+aside {
+  margin: calc(var(--line-height) * 2) 0;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+a.designer-name {
+  text-decoration: none;
+  color: #41403e;
+}
+
+a[class="designer-name"]:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.wrapper div:first-of-type {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 2px #41403e;
+}
+
 /*change color of text highlight*/
 ::-moz-selection {
   background: yellow;
@@ -65,4 +125,17 @@ h6 {
 ::selection {
   background: yellow;
   height: 16px;
+}
+
+/* put the footer to the bottom of the page */
+footer {
+  font-family: "Permanent Marker", cursive;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
