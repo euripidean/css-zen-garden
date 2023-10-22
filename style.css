@@ -139,3 +139,9 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+footer > a {
+  color: #41403e;
+  text-decoration: underline wavy blue;
+  text-underline-position: under;
+}
