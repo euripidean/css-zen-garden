@@ -1,15 +1,3 @@
-/* Type selector
-class selector done
-id selector done
-child selector done
-:nth-child() selector
-:first-of-type selector done
-attribute selector n/a
-wild card selector
-group selector done
-Combined class selector
-Descendant selector */
-
 @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
 
 /* declare variable for line height at 32px */
@@ -84,10 +72,12 @@ ul {
 }
 
 /* target every other paragraph inside #zen-supporting */
-#zen-supporting p:nth-child(odd)::after {
+#zen-supporting p:nth-child(odd)::before {
   content: "*";
   color: red;
   font-size: 96px;
+  position: relative;
+  top: 0;
 }
 
 aside div > h3 {
