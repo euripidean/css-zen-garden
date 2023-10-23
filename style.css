@@ -72,12 +72,11 @@ ul {
 }
 
 /* target every other paragraph inside #zen-supporting */
-#zen-supporting p:nth-child(odd)::before {
-  content: "*";
+#zen-supporting p:nth-child(odd)::after {
+  content: "**";
   color: red;
-  font-size: 96px;
+  font-size: 30px;
   position: relative;
-  top: 0;
 }
 
 aside div > h3 {
